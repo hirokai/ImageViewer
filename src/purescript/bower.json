@@ -1,0 +1,23 @@
+{
+  "name": "PureScript source",
+  "version": "0.0.0",
+  "homepage": "https://github.com/hirokai/ImageViewer",
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "purescript-prelude": "~0.1.3",
+    "purescript-node-path": "~0.4.0",
+    "purescript-assert": "~0.1.1",
+    "purescript-maps": "~0.5.2"
+  }
+}
