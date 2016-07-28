@@ -23,7 +23,7 @@ export default {
         cachedAssets: VERBOSE,
     },
 
-    entry: {main: './src/main.js', index: './src/index.jsx'},
+    entry: {index: './src/index.jsx'},
 
 
     output: {
