@@ -9,7 +9,7 @@ const ExternalsPlugin = webpack.ExternalsPlugin
 export default {
     cache: DEBUG,
 
-    debug: DEBUG,
+    // debug: DEBUG,
 
     stats: {
         colors: true,
@@ -36,7 +36,7 @@ export default {
     // devtool: DEBUG ? 'cheap-module-eval-source-map' : false,
 
     plugins: [
-        new webpack.optimize.OccurenceOrderPlugin(),
+        // new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.DefinePlugin({ 'process.env.NODE_ENV': `"${process.env.NODE_ENV || (DEBUG ? 'development' : 'production')}"` }),
         ...(DEBUG ? [] : [
             new webpack.optimize.DedupePlugin(),
@@ -69,12 +69,12 @@ export default {
     ],
 
     resolve: {
-        extensions: ['', '.js', '.jsx'],
+        extensions: ['.js', '.jsx'],
     },
 
     module: {
         loaders: [
-            { test: /\.jsx?$/, include: [path.resolve(__dirname, 'src')], loader: 'babel' },
+            { test: /\.jsx?$/, include: [path.resolve(__dirname, 'src')], loader: 'babel-loader' },
         ],
     },
 };

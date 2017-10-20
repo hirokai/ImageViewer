@@ -56,7 +56,7 @@ var Images = React.createClass({
                 if (self.props.video) {
                     return (
                         <div className='img_holder' key={image_path} style={{borderColor: bcolor}}>
-                            <h5>{basename}</h5>
+                            <h5 style={{color: bcolor}}>{basename}</h5>
                             <video width="320" height="240" controls>
                                 <source src={row.path || image_path} type="video/mp4"/>
                                 Your browser does not support the video tag.
@@ -66,7 +66,7 @@ var Images = React.createClass({
                 } else if (row) {
                     return (
                         <div className='img_holder' key={image_path} style={{borderColor: bcolor}}>
-                            <h5>{basename}</h5>
+                            <h5 style={{color: bcolor}}>{basename}</h5>
                             <img src={row.path || image_path} className='thumb' key={image_path}
                                  onClick={self.onClickImage.bind(self, image_path)}/>
                         </div>
